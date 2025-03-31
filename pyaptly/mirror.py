@@ -129,7 +129,8 @@ def cmd_mirror_create(cfg, mirror_name, mirror_config):
                 ",".join(util.unit_or_list_to_list(mirror_config["architectures"]))
             )
         )
-
+    if "check-signature" in mirror_config and mirror_config["check-signature"]:
+        aptly_cmd.append("-ignore-signatures")
     aptly_cmd.append(mirror_name)
     aptly_cmd.append(mirror_config["archive"])
     aptly_cmd.append(mirror_config["distribution"])

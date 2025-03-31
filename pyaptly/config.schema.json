@@ -103,7 +103,8 @@
             "keyserver": { "type": "string", "description": "A PGP Key Server to retrieve keys for verification" },
             "max-tries": { "type": "integer", "description": "Set '-max-tries' for 'aptly repo update'" },
             "sources": { "type": "boolean", "description": "Set '-with-sources' for aptly" },
-            "udeb": { "type": "boolean", "description": "Set '-with-udebs' for aptly" }
+            "udeb": { "type": "boolean", "description": "Set '-with-udebs' for aptly" },
+            "check-signature": { "type": "boolean", "description": "Set '-ignore-signatures' for aptly" }
           }
       } }
     },
